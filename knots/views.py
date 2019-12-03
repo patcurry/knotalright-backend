@@ -18,6 +18,11 @@ class KnotCreate(CreateView):
     fields = ['name']
 
 
+class KnotDelete(DeleteView):
+    model = Knot
+    success_url = '/knots/' 
+
+
 class AlternativeNameCreate(CreateView):
     model = AlternativeName
     fields = ['name']
@@ -32,8 +37,8 @@ class AlternativeNameCreate(CreateView):
         return super(AlternativeNameCreate, self).form_valid(form)
 
     def get_success_url(self):
-        return reverse('knot-detail', kwargs={'slug': self.knot.slug})
+        return reverse('knots:knot-detail', kwargs={'slug': self.knot.slug})
 
 
-class AlternativeNameDelete(DeleteView):
-    model = AlternativeName
+#class AlternativeNameDelete(DeleteView):
+###    model = AlternativeName

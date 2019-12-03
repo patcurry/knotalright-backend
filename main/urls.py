@@ -20,5 +20,5 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='main/home.html'), name='home'),
-    path('knots/', include('knots.urls')),
+    path('knots/', include('knots.urls', namespace='knots')),
 ]

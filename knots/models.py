@@ -20,7 +20,7 @@ class Knot(models.Model):
         super(Knot, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('knot-detail', kwargs={'slug': self.slug})
+        return reverse('knots:knot-detail', kwargs={'slug': self.slug})
 
 
 class AlternativeName(models.Model):
