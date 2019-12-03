@@ -1,2 +1,10 @@
 <h2>{{ knot.name }}</h2>
 <p><a href='{% url "knot-list" %}'>Knot List</a></p>
+
+<h3>Alternative Names for "{{ knot.name }}":</h3>
+<ul>
+  {% for alternativename in knot.alternativename_set.all %}
+  <li>{{ alternativename}}</li>
+  {% endfor %}
+  <li><a href='#'>Add an alternative name</a></li>
+</ul>
