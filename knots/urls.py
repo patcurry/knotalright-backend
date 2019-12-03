@@ -1,11 +1,11 @@
 from django.urls import path
 
-from knots.views import KnotDetail
-from knots.views import KnotList
+from knots.views import KnotCreate, KnotDetail, KnotList
 
 
 urlpatterns = [
-    path('', KnotList.as_view(), name='knot_list'),
-    path('<slug:slug>/', KnotDetail.as_view(), name='knot_detail'),
+    path('', KnotList.as_view(), name='knot-list'),
+    path('create/', KnotCreate.as_view(), name='knot-create'),
+    path('<slug:slug>/', KnotDetail.as_view(), name='knot-detail'),
 ]
 

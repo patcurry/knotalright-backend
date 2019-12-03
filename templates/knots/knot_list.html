@@ -1,6 +1,6 @@
 <h2>Knot List</h2>
 <ul>
   {% for knot in knot_list %}
-  <li>{{ knot.name }}</li>
+  <li><a href='{{ knot.get_absolute_url }}'>{{ knot.name }}</a></li>
   {% endfor %}
 </ul>

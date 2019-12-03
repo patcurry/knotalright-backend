@@ -1,5 +1,6 @@
-from django.views.generic import DetailView
-from django.views.generic import ListView
+from django.views.generic import DetailView, ListView   
+from django.views.generic.edit import CreateView
+
 from knots.models import Knot
 
 
@@ -9,3 +10,8 @@ class KnotDetail(DetailView):
 
 class KnotList(ListView):
     model = Knot
+
+
+class KnotCreate(CreateView):
+    model = Knot
+    fields = ['name']
