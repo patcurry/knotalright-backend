@@ -1,0 +1,27 @@
+.knot-container {
+  display: flex;
+  background: #d8f6ff;
+  flex-direction: column;
+  align-items: center;
+}
+
+.knot-container:hover {
+  background: #b3e3ff;
+  background: #3f6cc1;
+}
+
+.knot-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+}

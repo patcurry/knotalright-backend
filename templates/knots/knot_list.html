@@ -1,6 +1,20 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/knots/knot_list.css' %}">
+</head>
+<body>
 <h2>Knot List</h2>
-<ul>
+
+<div class='knot-list'>
   {% for knot in knot_list %}
-  <li><a href='{{ knot.get_absolute_url }}'>{{ knot.name }}</a></li>
+    <a href='{{ knot.get_absolute_url }}'>
+  <div class='knot-container'>
+      <p>{{ knot.name }}</p>
+    <p>knot description</p>
+
+  </div>
+    </a>
   {% endfor %}
-</ul>
+</div>
+</body>
